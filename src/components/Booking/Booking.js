@@ -16,7 +16,7 @@ const Booking = () => {
         <div className='order__data'>
           <Text></Text>
           <div className="dots"></div>
-          <Text className="text-small">{cityName}
+          <Text className="text-small">{cityName}, {tabTitle}
           </Text>
         </div>
       </div>
