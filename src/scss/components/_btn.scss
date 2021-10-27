@@ -1,0 +1,25 @@
+.btn__wraper{
+  --main-bg-color: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+  --hover-bg-color: linear-gradient(90deg, #0B934A 2.61%, #026E47 112.6%);
+  --active-bg-color: linear-gradient(90deg, #076432 2.61%, #013C27 112.6%);
+}
+
+.btn {  
+  padding: 16px 32px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--main-bg-color);
+}
+
+.btn:hover {
+  background: var(--hover-bg-color);
+}
+
+.btn:active {
+  background: var(--active-bg-color)
+}

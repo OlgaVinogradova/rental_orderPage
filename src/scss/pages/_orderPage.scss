@@ -1,0 +1,49 @@
+.op__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  min-width: 320px;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  --webkit-overflow-scrolling: touch;
+}
+
+.bc__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .op__wrap {
+    margin: 0 64px 0 152px;
+  }
+
+  .content {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .op__wrap {
+    margin: 0 64px 0 128px;
+  }
+  .content {
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-y: hidden;
+  }
+}

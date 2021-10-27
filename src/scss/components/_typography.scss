@@ -1,0 +1,19 @@
+:root {
+  --main-color: #121212;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #121212;
+  text-align: right;
+  margin-bottom: 32px;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  color: var(--main-color); 
+}

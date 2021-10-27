@@ -1,0 +1,154 @@
+.mp__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  min-width: 320px;
+  height: 100vh;
+}
+
+.mp__container {
+  margin: 32px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mp__content {
+  margin: 0px 16px 16px 32px;
+  flex: 1 1 auto;
+}
+
+.mp__content__title,
+.mp__content__name {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px; 
+}
+
+.mp__content__title {
+  color: #121212;
+  margin-bottom: 8px;
+}
+
+.mp__content__name {
+  color: #0EC261;
+  margin-bottom: 16px;
+}
+
+.mp__content__subtitle {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.mp__btn {
+  margin: 0 0 172px 0;
+  flex: 1 1 auto;
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .mp__wrap {
+    margin: 0 32px 0 120px;
+  }
+
+  .mp__container {
+    margin: 164px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mp__content {
+    margin: 0px 0 48px 0;
+  }
+  
+  .mp__content__title,
+  .mp__content__name {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 64px;
+  }
+
+  .mp__content__title {
+    color: #121212;
+    margin-bottom: 8px;
+  }
+  
+  .mp__content__name {
+    color: #0EC261;
+    margin-bottom: 32px;
+  }
+  
+  .mp__content__subtitle {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    color: #999999;
+  }
+  
+  .mp__btn {
+    margin: 0 0 32px 0;
+
+    .btn {
+      width: auto;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mp__wrap {
+    width: 52vw;
+    flex: 1 1 52%;
+    margin: 0 32px 0 96px;
+    display: flex;
+  }
+
+  .mp__container {
+    margin: 164px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mp__content {
+    margin: 0px 0 48px 0;
+  }
+  
+  .mp__content__title,
+  .mp__content__name {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 64px;
+  }
+
+  .mp__content__title {
+    color: #121212;
+    margin-bottom: 8px;
+  }
+  
+  .mp__content__name {
+    color: #0EC261;
+    margin-bottom: 32px;
+  }
+  
+  .mp__content__subtitle {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    color: #999999;
+  }
+  
+  .mp__btn {
+    margin: 0 0 32px 0;
+
+    .btn {
+      width: auto;
+      border-radius: 8px;
+    }
+  }
+}

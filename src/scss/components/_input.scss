@@ -1,0 +1,85 @@
+input::-webkit-calendar-picker-indicator{
+  opacity: 0;
+  margin-right: 24px;
+}
+
+.close__active {
+  position: absolute;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iZGFmODQ1MjktYzgxMC00ZTcyLTg5ODEtNmE1ZjI0OWQ2NDE4IiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiB2aWV3Qm94PSIwIDAgMzAgMzAiPjx0aXRsZT5hcHAtaWNvbnMtb3B0aW1pc2VkPC90aXRsZT48cGF0aCBkPSJNMjAuNzA2MywxMC42NjlhMC4xOTUsMC4xOTUsMCwwLDAsMC0uMjc1bC0xLjEtMS4xYTAuMTk1LDAuMTk1LDAsMCwwLS4yNzUsMGwtNC4xOTQsNC4xOTM1YTAuMTk1LDAuMTk1LDAsMCwxLS4yNzUsMGwtNC4xOTQtNC4xOTM1YTAuMTk1LDAuMTk1LDAsMCwwLS4yNzUsMGwtMS4xLDEuMWEwLjE5NSwwLjE5NSwwLDAsMCwwLC4yNzVsNC4xOTQsNC4xOTM1YTAuMTk1LDAuMTk1LDAsMCwxLDAsLjI3NUw5LjI5MzcsMTkuMzMxYTAuMTk1LDAuMTk1LDAsMCwwLDAsLjI3NWwxLjEsMS4xYTAuMTk1LDAuMTk1LDAsMCwwLC4yNzUsMGw0LjE5NC00LjE5MzVhMC4xOTUsMC4xOTUsMCwwLDEsLjI3NSwwbDQuMTk0LDQuMTkzNWEwLjE5NSwwLjE5NSwwLDAsMCwuMjc1LDBsMS4xLTEuMWEwLjE5NSwwLjE5NSwwLDAsMCwwLS4yNzVsLTQuMTk0LTQuMTkzNWEwLjE5NSwwLjE5NSwwLDAsMSwwLS4yNzVaIiBzdHlsZT0iZmlsbDojMjcyMzIwOyIvPjwvc3ZnPgo=);
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+}
+
+.close {
+  opacity: 0;
+}
+
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iZGFmODQ1MjktYzgxMC00ZTcyLTg5ODEtNmE1ZjI0OWQ2NDE4IiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiB2aWV3Qm94PSIwIDAgMzAgMzAiPjx0aXRsZT5hcHAtaWNvbnMtb3B0aW1pc2VkPC90aXRsZT48cGF0aCBkPSJNMjAuNzA2MywxMC42NjlhMC4xOTUsMC4xOTUsMCwwLDAsMC0uMjc1bC0xLjEtMS4xYTAuMTk1LDAuMTk1LDAsMCwwLS4yNzUsMGwtNC4xOTQsNC4xOTM1YTAuMTk1LDAuMTk1LDAsMCwxLS4yNzUsMGwtNC4xOTQtNC4xOTM1YTAuMTk1LDAuMTk1LDAsMCwwLS4yNzUsMGwtMS4xLDEuMWEwLjE5NSwwLjE5NSwwLDAsMCwwLC4yNzVsNC4xOTQsNC4xOTM1YTAuMTk1LDAuMTk1LDAsMCwxLDAsLjI3NUw5LjI5MzcsMTkuMzMxYTAuMTk1LDAuMTk1LDAsMCwwLDAsLjI3NWwxLjEsMS4xYTAuMTk1LDAuMTk1LDAsMCwwLC4yNzUsMGw0LjE5NC00LjE5MzVhMC4xOTUsMC4xOTUsMCwwLDEsLjI3NSwwbDQuMTk0LDQuMTkzNWEwLjE5NSwwLjE5NSwwLDAsMCwuMjc1LDBsMS4xLTEuMWEwLjE5NSwwLjE5NSwwLDAsMCwwLS4yNzVsLTQuMTk0LTQuMTkzNWEwLjE5NSwwLjE5NSwwLDAsMSwwLS4yNzVaIiBzdHlsZT0iZmlsbDojMjcyMzIwOyIvPjwvc3ZnPgo=);
+  margin-right: -24px;
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+}
+
+input {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #121212;
+  width: 224px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #999999;
+  padding: 4px 8px;
+}
+
+.input[disabled] {
+  cursor: not-allowed;
+}
+
+// .input[name="checkbox"],
+// .input[name="radio"] {
+//   width: 40px;
+//   height: 40px;
+//   margin: 0 auto;
+// }
+
+.input.error {
+  border-color: #D43728;
+  background-color: rgba(212, 55, 40, 0.2);
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.labelsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputRequired {
+  color: #777;
+}
+
+.inputRequired,
+.inputLabel {
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.inputError {
+  margin-top: 5px;
+  color: #D43728;
+  font-size: 12px;
+}

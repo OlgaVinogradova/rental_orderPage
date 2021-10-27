@@ -1,0 +1,44 @@
+.header {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .name {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    color: #0EC261;
+    margin-bottom: 8px;
+  }
+  
+  .header__location {
+    display: flex;
+    align-items: center
+  }
+  
+  .location__name {
+    color: #999999;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  
+  .location__icon {
+    fill: #999999;
+    width: 16px;
+    height: 18px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .header {
+    margin: 32px 0px 32px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

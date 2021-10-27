@@ -1,0 +1,85 @@
+%text-shared {
+  font-size: 14px;
+  line-height: 16;
+  letter-spacing: 1px;
+}
+
+.breadcrumbs__wrap {
+  display: flex;
+  border-bottom: 1px solid #EEEEEE;
+  border-top: 1px solid #EEEEEE;
+  width: 100vw;
+}
+
+.breadcrumbs__container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  margin: 0 16px 0 16px;
+  min-width: 350px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  --webkit-overflow-scrolling: touch;
+  height: 32px;
+
+  .tab {
+    display: flex;
+  }
+}
+
+
+
+.triangle {
+  margin: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab:last-child .triangle { display: none; }
+
+.tab__link {
+  @extend %text-shared;
+  font-weight: bold;
+  color: #999999;
+
+  &:hover,
+  &:active {
+    color: #0EC261;
+  }
+}
+
+.active {
+  color: #0EC261;
+}
+
+.trglIcon {
+  width: 16px;
+  height: 12px;
+  fill: #999999;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .breadcrumbs__wrap {
+    margin: 0 -40px 0 -152px;
+  }
+  
+  .breadcrumbs__container {
+    margin: 0 40px 0 152px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .breadcrumbs__wrap {
+    margin: 0 -40px 0 -128px;
+  }
+  
+  .breadcrumbs__container {
+    margin: 0 40px 0 128px;
+    overflow: hidden;
+  }
+}
