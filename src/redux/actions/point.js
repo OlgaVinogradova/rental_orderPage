@@ -1,7 +1,12 @@
 
-export const setPoints = (addres) => ({
+export const setPoints = (address) => ({
   type: 'SET_POINTS',
-  payload: addres
+  payload: address
+})
+
+export const setPointName = (name) => ({
+  type: 'SET_POINT_NAME',
+  payload: name
 })
 
 

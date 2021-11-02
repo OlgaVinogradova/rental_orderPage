@@ -10,9 +10,7 @@ const OrderPage = ({ children }) => {
       <Header />
       <Breadcrumbs />
       <div className='content'>
-        <div className='content__wrap'>
-          {children}
-        </div>
+        {children}
         <Booking />
       </div>
     </div>
