@@ -4,7 +4,12 @@ export const setCityBooking = (name) => ({
   payload: name,
 })
 
-export const setPointBooking = (addres) => ({
+export const setPointBooking = (address) => ({
   type: 'SET_POINT_BOOKING',
-  payload: addres,
+  payload: address,
+})
+
+export const setTabNameBooking = (name) => ({
+  type: 'SET_TAB_NAME_BOOKING',
+  payload: name,
 })

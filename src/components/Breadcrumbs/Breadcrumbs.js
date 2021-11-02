@@ -1,11 +1,36 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectTabBooking } from "../../redux/actions/booking";
 import Tab from './Tab';
 
+const tabsData = [
+  {
+    id: 1,
+    title: 'Местоположение',
+    path: 'location'
+  },
+  {
+    id: 2,
+    title: 'Модель',
+    path: 'model'
+  },
+  {
+    id: 3,
+    title: 'Дополнительно',
+    path: 'option'
+  },
+  {
+    id: 4,
+    title: 'Итого',
+    path: 'subtotal'
+  },
+  {
+    id: 5,
+    title: 'Модель(Fetch)',
+    path: 'modelFetch'
+  },
+]
+
+
 const Menu = () => {
-  const dispatch = useDispatch();
-  const tabsData = useSelector(({ tabsData }) => tabsData)
 
   return (
     <div className='breadcrumbs__wrap'>
@@ -15,7 +40,6 @@ const Menu = () => {
             key={tab.id}
             to={`/${tab.path}`}
             title={tab.title}
-
           />
         )}
       </div>
