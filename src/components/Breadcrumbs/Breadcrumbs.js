@@ -1,21 +1,23 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectTabBooking } from "../../redux/actions/booking";
+import { useDispatch, useSelector } from 'react-redux';
+
 import Tab from './Tab';
+import { selectTab } from '../../redux/actions/tab';
+
 
 const Menu = () => {
   const dispatch = useDispatch();
-  const tabsData = useSelector(({ tabsData }) => tabsData)
+  const tabsData = useSelector((state) => state.tabsData)
 
   return (
     <div className='breadcrumbs__wrap'>
       <div className='breadcrumbs__container'>
         {tabsData?.map((tab) =>
           <Tab
+            onClickTab={() => dispatch(selectTab(tab.title))}
             key={tab.id}
             to={`/${tab.path}`}
             title={tab.title}
-
           />
         )}
       </div>

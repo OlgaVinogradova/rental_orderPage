@@ -1,7 +1,7 @@
 const SELECT_TAB = 'SELECT_TAB'
 
 const defaultState = {
-  title: 'Местоположение'
+  tabName: 'Местоположение',
 }
 
 export default function tabReducer(state = defaultState, action) {
@@ -9,7 +9,7 @@ export default function tabReducer(state = defaultState, action) {
     case SELECT_TAB:
       return {
         ...state,
-        title: action.payload
+        tabName: action.payload,
       }
     default:
       return state

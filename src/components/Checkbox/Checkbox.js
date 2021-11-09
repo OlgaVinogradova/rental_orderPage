@@ -9,6 +9,7 @@ const Checkbox = ({ children, onChange, value, checked }) => {
       <input className="hidden-checkbox" type="checkbox"
         onChange={onChange}
         checked={checked}
+        value={value}
       />
       <div className="checkbox">
         <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 48 48"><path fill="#121212" d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" /></svg>

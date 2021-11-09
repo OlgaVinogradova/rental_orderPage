@@ -1,7 +1,7 @@
 import React from 'react'
 import Input from '../input/Input'
 
-const Datalist = ({ data, name, onChange, placeholder }) => {
+const Datalist = ({ data, name, onChange, placeholder, onSelect }) => {
   return (
     <div className='datalist'>
       <Input
@@ -11,7 +11,9 @@ const Datalist = ({ data, name, onChange, placeholder }) => {
         type='search'
         placeholder={placeholder}
       />
-      <datalist id={name}>
+      <datalist id={name}
+        onSelect={onSelect}
+      >
         {data?.map((value, key) => {
           return (
             <option value={value.name} key={key}>
