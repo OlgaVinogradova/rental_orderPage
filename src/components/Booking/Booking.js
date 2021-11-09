@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 const Booking = () => {
   const { pointAddress } = useSelector((store) => store.point)
   const { cityName } = useSelector((store) => store.city)
-  const { tabName } = useSelector((store) => store.tab)
 
   return (
     <div className='booking'>
@@ -27,9 +26,11 @@ const Booking = () => {
         </div>
       </div>
       <div className='btn__booking'>
-        <Link to='/model'>
+        <Link
+        // to={`/${tabTitle}`}
+        >
           <Button className='btn'
-          >{tabName}</Button>
+          >{ }</Button>
         </Link>
       </div>
     </div>

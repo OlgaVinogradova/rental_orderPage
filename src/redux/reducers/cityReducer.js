@@ -1,7 +1,3 @@
-import axios from "axios";
-import { key } from "../../api/key";
-import { setCitys } from "../actions/city";
-
 const SET_CITYS = 'SET_CITYS';
 const SET_CITY_NAME = 'SET_CITY_NAME';
 
@@ -26,10 +22,3 @@ export default function cityReducer(state = defaultState, action) {
       return state
   }
 }
-
-
-export const getCitys = () => (dispatch) => {
-  axios.get('https://api-factory.simbirsoft1.com/api/db/city', key).then(({ data }) => {
-    dispatch(setCitys(data))
-  });
-};

@@ -4,18 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import OrderPage from './OrderPage';
 import CarsCard from '../../components/CarsCard/CarsCard';
 import { CategoriesFetch } from '../../components/Categories/CategoriesFetch';
-import { fetchCategory, setCategoryId } from '../../redux/actions/filters';
-import { fetchCars } from '../../redux/actions/car';
+import { setCategoryId } from '../../redux/actions/filters';
+import { fetchCars, fetchCategory } from '../../redux/actions/fetch';
 import { Loader } from '../../components/Loader/Loader';
 
-// const categoryName = ['Эконом', 'Премиум'];
 
 const ModelFetch = () => {
   const dispatch = useDispatch();
 
   const items = useSelector((store) => store.cars.items);
   const isLoaded = useSelector((store) => store.cars.isLoaded);
-  const category = useSelector((store) => store.filters.category);
+  const category = useSelector((store) => store.filters?.items);
 
 
   React.useEffect(() => {
@@ -23,9 +22,9 @@ const ModelFetch = () => {
   }, []);
 
 
-  // React.useEffect(() => {
-  //   dispatch(fetchCars());
-  // }, [category]);
+  React.useEffect(() => {
+    dispatch(fetchCars());
+  }, [category]);
 
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategoryId(index));
@@ -42,13 +41,13 @@ const ModelFetch = () => {
           onClickCategory={onSelectCategory}
         />
         <div className='model__wrap'>
-          {/* <div className='model'>
+          <div className='model'>
             {isLoaded
               ?
               items?.map((obj, index) => <CarsCard key={index} {...obj} />)
               : <Loader />
             }
-          </div> */}
+          </div>
         </div>
       </div>
     </OrderPage>

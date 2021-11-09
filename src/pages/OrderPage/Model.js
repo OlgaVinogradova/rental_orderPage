@@ -1,10 +1,11 @@
+
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import OrderPage from './OrderPage';
 import CarsCard from '../../components/CarsCard/CarsCard';
 import { Categories } from '../../components/Categories/Categories';
 import { setCategory } from '../../redux/actions/category';
-import { fetchCars } from '../../redux/actions/car';
+import { fetchCars } from '../../redux/actions/fetch';
 import { Loader } from '../../components/Loader/Loader';
 
 const categoryName = ['Эконом', 'Премиум'];
@@ -18,7 +19,7 @@ const Model = () => {
 
   React.useEffect(() => {
     dispatch(fetchCars());
-  }, [category]);
+  }, []);
 
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategory(index));

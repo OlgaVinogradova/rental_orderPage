@@ -3,7 +3,7 @@ const SET_CATEGORY_ID = 'SET_CATEGORY_ID';
 
 
 const initialState = {
-  category: [],
+  items: [],
   categoryId: null
 };
 
@@ -12,7 +12,7 @@ const filters = (state = initialState, action) => {
     case SET_CATEGORY:
       return {
         ...state,
-        category: action.payload.data
+        items: action.payload.data
       }
 
     case SET_CATEGORY_ID:

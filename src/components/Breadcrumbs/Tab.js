@@ -2,13 +2,20 @@ import React from 'react'
 import { NavLink } from "react-router-dom";
 import TriangleRight from '../svg/triangleRight';
 
-const Tab = ({ to, title, onSelect }) => {
+import { useDispatch, useSelector } from 'react-redux';
+import { selectTab } from '../../redux/actions/tab';
+
+const Tab = ({ to, title, onClickTab, active }) => {
 
   return (
     <div className='tab'
-      onClick={onSelect}
+      onClick={onClickTab}
     >
-      <NavLink to={to || '/'} className='tab__link' activeClassName='active'>
+      <NavLink to={to || '/'}
+        className={active === title ? "active" : "tab__link"}
+      // className='tab__link' activeClassName='active'
+
+      >
         <span className='tab__title'>{title}</span>
       </NavLink>
       <div className='triangle'>
