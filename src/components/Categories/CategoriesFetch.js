@@ -9,13 +9,13 @@ export const CategoriesFetch = React.memo(function CategoriesFetch({ activeCateg
         <RadioButton
           checked={activeCategory === null ? true : false}
           onChange={() => onClickCategory(null)}
-        >Все модели</RadioButton>
+        >Все</RadioButton>
         {items &&
-          items.map((cat, index) =>
+          items.map((cat) =>
             <RadioButton
-              checked={activeCategory === index ? true : false}
+              checked={activeCategory === cat.id ? true : false}
               key={cat.id}
-              onChange={() => onClickCategory(index)}
+              onChange={() => onClickCategory(cat.id)}
             >
               {cat.name}
             </RadioButton>

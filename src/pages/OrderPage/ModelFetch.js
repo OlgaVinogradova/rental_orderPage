@@ -5,46 +5,66 @@ import OrderPage from './OrderPage';
 import CarsCard from '../../components/CarsCard/CarsCard';
 import { CategoriesFetch } from '../../components/Categories/CategoriesFetch';
 import { setCategoryId } from '../../redux/actions/filters';
-import { fetchCars, fetchCategory } from '../../redux/actions/fetch';
+import { getCars, getCategory } from '../../redux/actions/fetch';
+import { selectedCar } from '../../redux/actions/car';
+import { activePage } from '../../redux/actions/step';
 import { Loader } from '../../components/Loader/Loader';
 
 
 const ModelFetch = () => {
   const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(activePage('SELECT_MODEL'))
+  }, [])
 
-  const items = useSelector((store) => store.cars.items);
-  const isLoaded = useSelector((store) => store.cars.isLoaded);
-  const category = useSelector((store) => store.filters?.items);
+  const { cars, isLoaded } = useSelector((store) => store.cars)
+  const itemsCars = useSelector((store) => store.cars.items)
+
+  const { categories, categoryId } = useSelector((store) => store.filters)
 
 
   React.useEffect(() => {
-    dispatch(fetchCategory());
+    dispatch(getCategory());
   }, []);
 
+  const onSelectCategory = React.useCallback((id) => {
+    dispatch(setCategoryId(id));
+  }, []);
 
   React.useEffect(() => {
-    dispatch(fetchCars());
-  }, [category]);
+    dispatch(getCars(categoryId));
+  }, [categoryId]);
 
-  const onSelectCategory = React.useCallback((index) => {
-    dispatch(setCategoryId(index));
-  }, []);
+  const handleactiveCarId = itemsCars ? itemsCars.id : null
 
-  console.log(category)
+  const onSelectModel = (obj) => {
+    dispatch(selectedCar(obj))
+  }
 
   return (
     <OrderPage>
       <div className='content__select'>
         <CategoriesFetch
-          activeCategory={category}
-          items={category}
+          activeCategory={categoryId}
+          items={categories}
           onClickCategory={onSelectCategory}
         />
         <div className='model__wrap'>
           <div className='model'>
+            {/* <CarsCard
+              items={cars}
+              onClickModel={onSelectCar}
+              activeModel={carName}
+              isLoaded={isLoaded}
+            /> */}
             {isLoaded
               ?
-              items?.map((obj, index) => <CarsCard key={index} {...obj} />)
+              cars?.map((obj) =>
+                <CarsCard key={obj.id}
+                  {...obj}
+                  onClickModel={onSelectModel}
+                  activeModel={handleactiveCarId}
+                />)
               : <Loader />
             }
           </div>

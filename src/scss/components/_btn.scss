@@ -2,6 +2,8 @@
   --main-bg-color: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
   --hover-bg-color: linear-gradient(90deg, #0B934A 2.61%, #026E47 112.6%);
   --active-bg-color: linear-gradient(90deg, #076432 2.61%, #013C27 112.6%);
+
+  --disabled-bg-color: linear-gradient(90deg, #eeeeee 2.61%, #d3d2d2 112.6%);
 }
 
 .btn {  
@@ -22,4 +24,11 @@
 
 .btn:active {
   background: var(--active-bg-color)
+}
+
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus,
+.btn[disabled]:active {
+  background: var(--disabled-bg-color);
 }

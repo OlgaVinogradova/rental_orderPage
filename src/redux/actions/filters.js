@@ -1,5 +1,3 @@
-import axios from "axios";
-import { key } from "../../api/key";
 
 export const setCategory = (cat) => ({
   type: 'SET_CATEGORY',
@@ -11,10 +9,6 @@ export const setCategoryId = (categoryId) => ({
   payload: categoryId
 })
 
-export const fetchCategory = () => (dispatch) => {
-  axios.get('https://api-factory.simbirsoft1.com/api/db/category', key).then(({ data }) => {
-    dispatch(setCategory(data))
-  });
-};
+
 
 

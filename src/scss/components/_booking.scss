@@ -11,7 +11,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .order__data {
@@ -86,7 +85,7 @@
   }
 
   .prise {
-    margin: 32px 0 32px 32px;
+    margin: 32px 0 32px 0;
   }
 
   .btn__booking {

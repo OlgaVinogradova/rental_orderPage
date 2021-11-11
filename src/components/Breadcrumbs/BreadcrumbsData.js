@@ -8,10 +8,6 @@ export const BreadcrumbsData = [
     path: 'model'
   },
   {
-    title: 'Модель(Fetch)',
-    path: 'modelFetch'
-  },
-  {
     title: 'Дополнительно',
     path: 'option'
   },

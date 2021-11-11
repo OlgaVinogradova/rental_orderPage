@@ -19,14 +19,14 @@ export const getPoints = (selectedCityId) => (dispatch) => {
 };
 
 
-export const fetchCars = (selectedCategoryId) => (dispatch) => {
+export const getCars = (selectedCategoryId) => (dispatch) => {
   dispatch(setLoaded(false));
   axios.get(LINKS.carsCategory(selectedCategoryId), key).then(({ data }) => {
     dispatch(setCars(data))
   });
 };
 
-export const fetchCategory = () => (dispatch) => {
+export const getCategory = () => (dispatch) => {
   axios.get(LINKS.category, key).then(({ data }) => {
     dispatch(setCategory(data))
   });

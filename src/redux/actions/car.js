@@ -4,9 +4,12 @@ export const setLoaded = (payload) => ({
   payload,
 });
 
-
-
 export const setCars = (car) => ({
   type: 'SET_CARS',
   payload: car,
+});
+
+export const selectedCar = (carObj) => ({
+  type: 'SELECTED_CAR',
+  payload: carObj,
 });

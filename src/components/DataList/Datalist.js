@@ -1,12 +1,13 @@
 import React from 'react'
 import Input from '../input/Input'
 
-const Datalist = ({ data, name, onChange, placeholder, onSelect }) => {
+const Datalist = ({ data, name, onChange, placeholder, onSelect, disabled }) => {
   return (
     <div className='datalist'>
       <Input
         className='datalist__input'
         list={name}
+        disabled={disabled}
         onChange={onChange}
         type='search'
         placeholder={placeholder}

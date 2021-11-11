@@ -9,10 +9,6 @@ export default function () {
       path: 'model'
     },
     {
-      title: 'МодельFetch',
-      path: 'modelFetch'
-    },
-    {
       title: 'Дополнительно',
       path: 'option'
     },

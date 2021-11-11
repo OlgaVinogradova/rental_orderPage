@@ -6,13 +6,16 @@ import { getCitys, getPoints } from '../../redux/actions/fetch';
 
 import { setPointName } from '../../redux/actions/point';
 import { setCityName } from '../../redux/actions/city';
+import { activePage } from '../../redux/actions/step';
 import Datalist from '../DataList/Datalist';
 import Text from '../typography/Text';
 
 
 export const SelectLocation = () => {
   const dispatch = useDispatch()
-
+  React.useEffect(() => {
+    dispatch(activePage('SELECT_LOCATION'))
+  }, [])
   const city = useSelector((store) => store.city?.items)
   const point = useSelector((store) => store.point?.items)
 
@@ -61,6 +64,7 @@ export const SelectLocation = () => {
       <div className='select'>
         <label><Text>Пункт выдачи</Text></label>
         <Datalist
+          disabled={!selectedCityId}
           data={pointAddress}
           name='adress-list'
           onChange={onChangeAdress}

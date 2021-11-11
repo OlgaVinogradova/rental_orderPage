@@ -1,9 +1,11 @@
 const SET_CARS = 'SET_CARS';
 const SET_LOADED = 'SET_LOADED';
+const SELECTED_CAR = 'SELECTED_CAR';
 
 const defaultState = {
-  items: [],
-  isLoaded: false
+  cars: [],
+  isLoaded: false,
+  items: []
 };
 
 export default function carsReducer(state = defaultState, action) {
@@ -11,7 +13,7 @@ export default function carsReducer(state = defaultState, action) {
     case SET_CARS:
       return {
         ...state,
-        items: action.payload.data,
+        cars: action.payload.data,
         isLoaded: true,
       };
     case SET_LOADED:
@@ -19,6 +21,21 @@ export default function carsReducer(state = defaultState, action) {
         ...state,
         isLoaded: action.payload
       };
+    case SELECTED_CAR: {
+      return {
+        ...state,
+        items: action.payload
+      };
+
+      // const newItems = {
+      //   [action.payload]: !state.items[action.payload] ? [action.payload]
+      //     : [action.payload],
+      // };
+      // return {
+      //   ...state,
+      //   items: newItems,
+      // };
+    }
     default:
       return state
   }
