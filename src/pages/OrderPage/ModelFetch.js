@@ -51,12 +51,6 @@ const ModelFetch = () => {
         />
         <div className='model__wrap'>
           <div className='model'>
-            {/* <CarsCard
-              items={cars}
-              onClickModel={onSelectCar}
-              activeModel={carName}
-              isLoaded={isLoaded}
-            /> */}
             {isLoaded
               ?
               cars?.map((obj) =>

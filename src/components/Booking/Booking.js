@@ -8,7 +8,7 @@ import { BookingButton } from './BookingButton';
 
 
 const Booking = () => {
-  const { pointAddress } = useSelector((store) => store.point)
+  const { selectedAddress } = useSelector((store) => store.point)
   const { cityName } = useSelector((store) => store.city)
   const { activePage } = useSelector((store) => store.step)
 
@@ -20,13 +20,13 @@ const Booking = () => {
     <div className='booking'>
       <div className='booking__content'>
         <Title>Ваш заказ:</Title>
-        {cityName && <BookingSection label='Пункт выдачи' value={`${cityName}, ${pointAddress}`} />}
+        {cityName && <BookingSection label='Пункт выдачи' value={`${cityName}, ${selectedAddress}`} />}
         {model.name && <BookingSection label='Модель' value={`${model.name}`} />}
         {model.name && <div className='prise'><b>Цена:</b> от {model.priceMin} до {model.priceMax}</div>}
       </div>
       <div className='btn__booking'>
         <BookingButton
-          pointAddress={pointAddress}
+          selectedAddress={selectedAddress}
           model={model.name}
           activePage={activePage}
           selectAllOption={selectAllOption}

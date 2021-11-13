@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import Button from '../button/Button';
 
 
-export const BookingButton = ({ pointAddress, model, activePage, selectAllOption }) => {
+export const BookingButton = ({ selectedAddress, model, activePage, selectAllOption }) => {
 
   return (
     <Fragment >
       <Link to={'/model'}>
         <Button
-          disabled={!pointAddress}
+          disabled={!selectedAddress}
           isVisible={activePage === 'SELECT_LOCATION'}
         >Выбрать модель
         </Button>

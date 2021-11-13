@@ -21,20 +21,18 @@ export const SelectLocation = () => {
 
   const { cityName } = useSelector((store) => store.city)
 
+  const { selectedAddress } = useSelector((store) => store.point)
 
-  const pointAddress = point.map(item => {
+
+  const newPointAddress = point.map(item => {
     const container = {};
     container.name = item.address;
     return container;
   })
 
-  console.log(pointAddress);
-
   const selectedCity = city.find((i) => i.name === cityName);
 
   const selectedCityId = selectedCity ? selectedCity.id : null
-
-  console.log(selectedCityId)
 
   React.useEffect(() => {
     dispatch(getCitys())
@@ -57,6 +55,7 @@ export const SelectLocation = () => {
           data={city}
           name='cities-list'
           onChange={onChangeCity}
+          value={cityName}
           placeholder='Начните вводить город...'
         />
       </div>
@@ -65,7 +64,8 @@ export const SelectLocation = () => {
         <label><Text>Пункт выдачи</Text></label>
         <Datalist
           disabled={!selectedCityId}
-          data={pointAddress}
+          data={newPointAddress}
+          value={selectedAddress}
           name='adress-list'
           onChange={onChangeAdress}
           placeholder='Начните вводить пункт...'

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Input = ({
-  id, className, list, placeholder, label, onChange, error, ...attrs
+  id, className, list, placeholder, label, value, onChange, error, ...attrs
 }) => {
   const classes = classNames(
     'input',
@@ -28,6 +28,7 @@ const Input = ({
         placeholder={placeholder}
         onChange={onChange}
         className={classes}
+        value={value}
         {...attrs}
       />
       {error

@@ -4,7 +4,7 @@ const SET_POINT_NAME = 'SET_POINT_NAME';
 
 const defaultState = {
   items: [],
-  pointAddress: null,
+  selectedAddress: null,
 }
 
 export default function pointReducer(state = defaultState, action) {
@@ -17,7 +17,7 @@ export default function pointReducer(state = defaultState, action) {
     case SET_POINT_NAME:
       return {
         ...state,
-        pointAddress: action.payload
+        selectedAddress: action.payload
       }
     default:
       return state

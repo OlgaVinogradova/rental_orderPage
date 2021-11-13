@@ -3,14 +3,18 @@ import { Link } from "react-router-dom";
 import TriangleRight from '../svg/triangleRight';
 
 
-const Tab = ({ to, title, onClickTab, isActive }) => {
+const Tab = ({ to, title, isActive, isEnabled, disabled }) => {
+
 
   return (
     <div className='tab'
-      onClick={onClickTab}
     >
       <Link to={to || '/'}
-        className={isActive ? "active" : "tab__link"}
+
+        className={isActive ? "active" :
+          // isEnabled ? 'enabled' :
+          disabled ? 'disabled' :
+            "tab__link"}
       >
         <span className='tab__title'>{title}</span>
       </Link>
