@@ -17,7 +17,9 @@ const SliderCard = ({ imgPath, title, text, btnColor, btnColorHover }) => {
           <div className='content__subtitle'>
             {text}
           </div>
-          <Button className='btn__slider'
+          <Button
+            isVisible
+            className='btn__slider'
             style={{
               '--main-bg-color': btnColor,
               '--hover-bg-color': btnColorHover,

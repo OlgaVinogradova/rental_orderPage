@@ -1,14 +1,23 @@
 import React from 'react'
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TriangleRight from '../svg/triangleRight';
 
-const Tab = ({ to, title }) => {
+
+const Tab = ({ to, title, isActive, isEnabled, disabled }) => {
+
 
   return (
-    <div className='tab'>
-      <NavLink to={to || '/'} className='tab__link' activeClassName='active'>
+    <div className='tab'
+    >
+      <Link to={to || '/'}
+
+        className={isActive ? "active" :
+          // isEnabled ? 'enabled' :
+          disabled ? 'disabled' :
+            "tab__link"}
+      >
         <span className='tab__title'>{title}</span>
-      </NavLink>
+      </Link>
       <div className='triangle'>
         <TriangleRight />
       </div>

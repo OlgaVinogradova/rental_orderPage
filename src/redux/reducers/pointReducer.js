@@ -1,11 +1,10 @@
-import axios from "axios";
-import { key } from "../../api/key";
-import { setPoints } from "../actions/point";
+const SET_POINTS = 'SET_POINTS';
+const SET_POINT_NAME = 'SET_POINT_NAME';
 
-const SET_POINTS = 'SET_POINTS'
 
 const defaultState = {
   items: [],
+  selectedAddress: null,
 }
 
 export default function pointReducer(state = defaultState, action) {
@@ -15,15 +14,14 @@ export default function pointReducer(state = defaultState, action) {
         ...state,
         items: action.payload.data
       }
+    case SET_POINT_NAME:
+      return {
+        ...state,
+        selectedAddress: action.payload
+      }
     default:
       return state
   }
 }
 
-export const getPoints = () => {
-  return async (dispatch) => {
-    const response = await axios.get('https://api-factory.simbirsoft1.com/api/db/point', key)
-    dispatch(setPoints(response.data))
-  }
-}
 
