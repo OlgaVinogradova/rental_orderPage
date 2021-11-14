@@ -7,5 +7,6 @@ export const LINKS = {
   category: url + '/db/category',
   cars: url + '/db/car',
   carsCategory: (selectedCategoryId) => (selectedCategoryId ? url + `/db/car?categoryId=${selectedCategoryId}` : url + '/db/car'),
+  rateType: url + '/db/rate',
 };
 

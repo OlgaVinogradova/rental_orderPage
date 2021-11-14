@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Input = ({
+const Input = ({ type,
   id, className, list, placeholder, label, value, onChange, error, ...attrs
 }) => {
   const classes = classNames(
@@ -22,6 +22,7 @@ const Input = ({
         }
       </div>
       <input
+        type={type}
         name={id}
         id={id}
         list={list}

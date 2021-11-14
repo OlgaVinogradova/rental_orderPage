@@ -1,11 +1,15 @@
 const SET_CARS = 'SET_CARS';
 const SET_LOADED = 'SET_LOADED';
 const SELECTED_CAR = 'SELECTED_CAR';
+const CAR_COLOR = 'CAR_COLOR';
+const SELECTED_COLOR = 'SELECTED_COLOR';
 
 const defaultState = {
   cars: [],
   isLoaded: false,
-  items: []
+  items: [],
+  activeCarColor: [],
+  colorName: null,
 };
 
 export default function carsReducer(state = defaultState, action) {
@@ -26,15 +30,18 @@ export default function carsReducer(state = defaultState, action) {
         ...state,
         items: action.payload
       };
-
-      // const newItems = {
-      //   [action.payload]: !state.items[action.payload] ? [action.payload]
-      //     : [action.payload],
-      // };
-      // return {
-      //   ...state,
-      //   items: newItems,
-      // };
+    };
+    case CAR_COLOR: {
+      return {
+        ...state,
+        activeCarColor: action.payload
+      };
+    }
+    case SELECTED_COLOR: {
+      return {
+        ...state,
+        colorName: action.payload
+      };
     }
     default:
       return state

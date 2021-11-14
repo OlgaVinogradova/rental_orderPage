@@ -9,8 +9,12 @@ const Menu = () => {
   const { selectedAddress } = useSelector((store) => store.point)
   const { cityName } = useSelector((store) => store.city)
   const { activePage } = useSelector((store) => store.step)
-
+  const { colorName } = useSelector((store) => store.cars)
+  const { selectedRate } = useSelector((store) => store.rate)
+  const { dateEnd } = useSelector(state => state.datePiker)
   const model = useSelector((store) => store.cars.items.name)
+
+  const selectAllOption = colorName && selectedRate && dateEnd
 
   return (
     <div className='breadcrumbs__wrap'>
@@ -32,14 +36,10 @@ const Menu = () => {
           disabled={!cityName || !selectedAddress || !model}
         />
         <Tab title="Итого"
-          disabled
-        // to={
-        //   !selectedAddress ? `${'/location'}` :
-        //     !model ? `${'/model'}` :
-        //       `${'/option'}`
-        // }
-        // isActive={activePage === 'SELECT_ALL_OPTION'}
-        // isEnabled={}
+
+          to={selectAllOption ? `${'/subtotal'}` : `${'/location'}`}
+          isActive={activePage === 'SELECT_SUBTOTAL'}
+          disabled={!colorName || !selectedRate || !dateEnd}
         />
 
       </div>
