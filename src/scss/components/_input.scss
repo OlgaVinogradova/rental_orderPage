@@ -43,13 +43,6 @@ input {
   cursor: not-allowed;
 }
 
-// .input[name="checkbox"],
-// .input[name="radio"] {
-//   width: 40px;
-//   height: 40px;
-//   margin: 0 auto;
-// }
-
 .input.error {
   border-color: #D43728;
   background-color: rgba(212, 55, 40, 0.2);
@@ -83,3 +76,34 @@ input {
   color: #D43728;
   font-size: 12px;
 }
+
+//--------------//
+
+.react-datepicker {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #121212;
+}
+
+.react-datepicker__day,
+.react-datepicker__day-name {
+  &--selected {
+    background-color: #0EC261;
+    &:hover {
+      background-color: #0EC261;
+    }
+  }
+}
+.react-datepicker__day,
+.react-datepicker__time-list-item {
+  &--selected,
+  &--keyboard-selected {
+    background-color:#0EC261 !important;
+    &:hover {
+      background-color:#0EC261 !important;
+    }
+  }
+}
+
+

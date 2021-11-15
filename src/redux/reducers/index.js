@@ -1,17 +1,25 @@
 import { combineReducers } from 'redux';
 
 import cityReducer from './cityReducer';
-import pointReducer from './cityReducer';
-import tabsData from './tabsData';
+import pointReducer from './pointReducer';
 import tabReducer from './tabReducer';
-import bookingReducer from './bookingReducer';
+import stepReducer from './stepReducer';
+import filters from './filters';
+import carsReducer from './carsReducer';
+import rateTypeReducer from './rateTypeReducer';
+import addServicesReducer from './addServicesReducer';
+import datePikerReducer from './datePikerReducer';
 
 const rootReducer = combineReducers({
   city: cityReducer,
   point: pointReducer,
-  tabsData,
   tab: tabReducer,
-  booking: bookingReducer,
+  filters,
+  cars: carsReducer,
+  step: stepReducer,
+  rate: rateTypeReducer,
+  addServices: addServicesReducer,
+  datePiker: datePikerReducer
 });
 
 export default rootReducer;

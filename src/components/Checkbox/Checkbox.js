@@ -1,14 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import './Checkbox.scss';
+import classNames from 'classnames';
 
-const Checkbox = ({ children, onChange, value, checked }) => {
+const Checkbox = ({ className, children, onChange, value, checked, name }) => {
 
   return (
-    <label className="custom-checkbox">
-      <input className="hidden-checkbox" type="checkbox"
+    <label className="custom-checkbox"
+
+      className={classNames("custom-checkbox", {
+        [checked]: checked,
+      })}>
+      <input className="hidden-checkbox"
+
+        type="checkbox"
         onChange={onChange}
         checked={checked}
+        id={children}
+        value={value}
+        name={name}
       />
       <div className="checkbox">
         <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 48 48"><path fill="#121212" d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" /></svg>

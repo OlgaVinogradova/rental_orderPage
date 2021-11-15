@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const RadioButton = ({ children, onChange, value, checked }) => {
+const RadioButton = ({ children, onChange, value, checked, name }) => {
 
   return (
     <label className="custom-radio">
-      <input className="radio" name="radio"
+      <input className="radio" name={name}
         value={value}
         type="radio"
         onChange={onChange}
-        checked={checked} />
+        checked={checked}
+      />
       <div className='radio__circle'></div><div className='radio__text'>{children}</div>
     </label>
   );

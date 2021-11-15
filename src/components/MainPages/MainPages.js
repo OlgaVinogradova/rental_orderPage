@@ -17,7 +17,10 @@ const MainPages = () => {
       </div>
       <div className='mp__btn'>
         <Link to='/location'>
-          <Button className='btn'>Забронировать</Button>
+          <Button
+            className='btn'
+            isVisible
+          >Забронировать</Button>
         </Link>
       </div>
       <Footer />
