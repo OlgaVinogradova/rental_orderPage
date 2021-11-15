@@ -25,7 +25,7 @@ const Booking = () => {
 
   const rateName = newRateType?.rateTypeId && newRateType.rateTypeId.name
 
-  const selectAllOption = colorName || selectedRate || dateEnd
+  const selectAllOption = colorName && selectedRate && dateEnd
 
 
   const date1 = moment(dateEnd, 'DD HH');
